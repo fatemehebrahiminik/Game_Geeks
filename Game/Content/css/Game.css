@@ -1,0 +1,77 @@
+﻿	html, body {
+			height: 98%;
+			margin: 0; 
+		}
+.full-height {
+    height: 98%;
+    background: white;
+}
+
+.div-image {
+    position: absolute;
+    font-size: 18px;
+    border: 1px solid black;
+    min-height: 150px;
+    min-width: 150px;
+    text-align: center center;
+}
+
+.topRight {
+    top: 0px;
+    right: 0px;
+    position:fixed
+}
+
+.topLeft {
+    top: 0px;
+    left: 0px;    
+    position:fixed
+}
+
+.bottomLeft {
+    bottom: 0px;
+    left: 0px;    
+    position:fixed
+}
+
+.bottomRight {
+    bottom: 0px;
+    right: 0px;
+   position:fixed
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    min-width: 150px;
+}
+ 
+
+.div-point {
+    position: absolute;
+    font-size: 2vw;
+    min-width: 150px;
+    text-align: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.div-countryName {
+    margin-top: 42%;
+    margin-left: 25%;
+    align-content: center center !important;
+    text-align: center center;
+    align-items: center center;
+}
+
+.div-boxes { 
+    min-height: 100%;
+    position: relative;
+}
+ 
+ 

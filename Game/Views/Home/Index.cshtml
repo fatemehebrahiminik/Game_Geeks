@@ -1,31 +1,44 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Game For Geeks";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<link href="~/Content/css/Game.css" rel="stylesheet" />
+<script src="~/Content/js/jquery-3.5.0.js"></script>
+<script src="~/Content/js/Game.js"></script>
+<div class="row full-height">
+    <div class="center-block div-boxes">
+        <div class="topRight div-image" boxid="0" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="div-countryName" boxid="0">Japanese</div>
+        </div>
+        <div class="topLeft div-image" boxid="1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="div-countryName" boxid="1">Chinese</div>
+        </div>
+        <div class="bottomLeft div-image" boxid="2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="div-countryName" boxid="2">Korean</div>
+        </div>
+        <div class="bottomRight div-image" boxid="3" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <label class="div-countryName" boxid="3">Thai</label>
+        </div>
+        <div class="wrapper" style="display:none" id="divPersonImage">
+            <img src="#" alt="Loading..." height="150" width="150" draggable="true" id="imgPerson"
+                 ondragstart="drag(event)" />
+        </div>
+    </div>
+
+</div>
+<div class="row" id="divPersonPoint">
+    <div class="col-lg-12 col-md-12 col-sm-12  center-block  text-center">
+        <label>Total points: </label><label><span id="spanPoints">0</span><span>&nbsp;Points.</span></label>
+    </div>
+    
+  
+</div>
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 center-block  text-center">
+        <button type="button" class="btn btn-success btn-lg"  id="btnPlayGame" onclick="PlayGame()">Play</button>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+
+

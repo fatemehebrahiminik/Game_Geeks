@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Game_Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 
 namespace Game.Controllers
@@ -12,19 +14,29 @@ namespace Game.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
+        public JsonResult GetNewPerson()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            try
+            { 
+                return Json(new PersonService().GetPerson(), JsonRequestBehavior.AllowGet);
+            }
+            catch (System.Exception ex)
+            {
+                //insert error to log services
+                return Json(null, JsonRequestBehavior.AllowGet);
+            }
         }
-
-        public ActionResult Contact()
+        public JsonResult CalculatePointGame(int boxId, int imgId)
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            try
+            {
+                return  Json(new PersonService().GetPoint(boxId, imgId), JsonRequestBehavior.AllowGet);
+            }
+            catch (System.Exception ex)
+            {
+                //insert error to log services
+                return  Json(null, JsonRequestBehavior.AllowGet);
+            }
         }
     }
 }
